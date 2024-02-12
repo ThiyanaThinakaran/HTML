@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="External.css" />
+<center><b>User information</b>
+<form action="#">
+    <label>Employee ID</label><input type="text" name="employeeID" value="100" readonly/><br>
+
+    <label for="fname">First name</label><input type="text"
+    name="firstName" placeholder="Enter your name" required minlength="3" maxlength="30"  /><br>
+
+    <label>Age</label><input type="number" min="18" max="60" name="empAge" size="5"/><br><br>
+
+    <label>Preferred Volume</label>    
+    <input type="range" min="1" max="100" style="width:200;"
+     onchange="updateVolume()" name="Volume"/>
+
+     <input type="text" name="volLevel" style="width:60px;height:15px" readonly/><br><br>
+
+     <label>Date of Joining</label>
+     <input type="date" name="joindate" min="2020-03-31" max="2023-09-26"/><br>
+
+     <label>Upload your Resume</label>
+     <input type="file" name="Resume" accept="audio/mp3,video/mp4,video/mpeg,application/pdf"/><br>
+
+     Your eMail<input type="email" name="emailID" minlength="6"/><br>
+
+    <input type="submit" value="Save" />&nbsp;&nbsp;<input type="reset" value="reset"/>
+</form>
+<script>
+    function updateVolume(){
+        document.forms[0].volLevel.value=document.forms[0].Volume.value + "%";
+    }
+</script>
+</center>

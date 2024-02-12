@@ -1,0 +1,161 @@
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+
+    @media only screen and(max-width:300px){
+
+    img {
+
+        width:90%;
+
+    }
+
+    }
+
+    @media only screen and (max-width: 500px){
+
+        img{width: 95%;}
+
+       
+
+ 
+
+    }
+
+    @media only screen and (max-width: 700px){
+
+        img{width: 85%;}
+
+       }
+
+   
+
+       
+
+   
+
+</style>
+
+<center><b>User information</b>
+
+    <img src="Chandrayaan.jpg"/><br><br>
+
+ 
+
+<form action="#" >
+
+ 
+
+    <label>Employee ID</label><input type="text" name="employeeID" value="100" readonly/><br>
+
+ 
+
+ 
+
+ 
+
+    <label for="fname">First name</label><input type="text"
+
+ 
+
+    name="firstName" placeholder="Enter your name" required minlength="3" maxlength="30"  /><br>
+
+ 
+
+ 
+
+ 
+
+    <label>Age</label><input type="number" min="18" max="60" name="empAge" size="5"/><br><br>
+
+    <legend><!--Legend will give box ie it will group similar ones but it is disabled in this browser-->
+
+    Select Gender<br>
+
+    <!--for radio names must kept same-->
+
+    <input type="radio" name="Gender" value="M"/>Male<br>
+
+    <input type="radio" name="Gender" value="F"/>Female<br>
+
+</legend><br>
+
+ 
+
+Hobbies<br>
+
+<fieldset><!--fieldset will also give a box like legend-->
+
+    <input type="checkbox" name="hobbies" value="Cricket"/>Cricket<br>
+
+    <input type="checkbox" name="hobbY" value="Music"/>Music<br>
+
+    <input type="checkbox" name="hobbies" value="Football"/>Football<br>
+
+   
+
+</fieldset>
+
+ 
+
+ 
+
+ 
+
+    <input type="button"  onclick="saveData()" value="Save" />&nbsp;&nbsp;<input type="reset" value="reset"/>
+
+ 
+
+</form>
+
+ 
+
+<script>
+
+ 
+
+    function saveData()
+
+ 
+
+    {
+
+ 
+
+        var v=document.forms[0].employeeID.value;
+
+ 
+
+        var a=document.forms[0].firstName.value;
+
+ 
+
+        var b=document.forms[0].empAge.value;
+
+ 
+
+        console.log(v+"\t\t" + a +"\t\t" + b);
+
+ 
+
+        localStorage.employeeID=v;
+
+ 
+
+        localStorage.firstName=a;
+
+ 
+
+        localStorage.empAge=b;
+
+ 
+
+    }
+
+ 
+
+</script>
+
+ 
+
+</center>

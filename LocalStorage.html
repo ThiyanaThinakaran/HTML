@@ -1,0 +1,35 @@
+<center><b>User information</b>
+<form action="#" >
+    <label>Employee ID</label><input type="text" name="employeeID" value="100" readonly/><br>
+
+    <label for="fname">First name</label><input type="text"
+    name="firstName" placeholder="Enter your name" required minlength="3" maxlength="30"  /><br>
+
+    <label>Age</label><input type="number" min="18" max="60" name="empAge" size="5"/><br><br>
+    <fieldset>
+    Select Gender<br>
+    <input type="radio" name="Gender" value="M">Male<br>
+    <input type="radio" name="Gender" value="F">Female<br>
+    </fieldset>
+    Hobbies<br>
+    <fieldset>
+        <input type="checkbox" name="hoobies" value="Cricket">Cricket<br>
+        <input type="checkbox" name="hoobies" value="Music">Music<br>
+        <input type="checkbox" name="hoobies" value="FootBall">FootBall<br>
+    </fieldset>
+
+    <input type="button"  onclick="saveData()" value="Save" />&nbsp;&nbsp;<input type="reset" value="reset"/>
+</form>
+<script>
+    function saveData()
+    {
+        var v=document.forms[0].employeeID.value;
+        var a=document.forms[0].firstName.value;
+        var b=document.forms[0].empAge.value;
+        console.log(v+"\t\t" + a +"\t\t" + b);
+        localStorage.employeeID=v;
+        localStorage.firstName=a;
+        localStorage.empAge=b;
+    }
+</script>
+</center>

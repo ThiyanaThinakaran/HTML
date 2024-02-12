@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>User Information Form</title>
+
+</head>
+
+<body>
+
+    <h1>Tell us about yourself</h1>
+
+    <form action="#" method="post">
+
+        <fieldset>
+
+            <legend>Your Name</legend>
+
+            <label for="first_name">First name:</label>
+
+            <input type="text" id="first_name" name="first_name" required><br>
+
+ 
+
+            <label for="last_name">Last name:</label>
+
+            <input type="text" id="last_name" name="last_name" required><br>
+
+ 
+
+            <label>Gender :</label>
+
+            <input type="radio" id="male" name="gender" value="male">
+
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+
+            <label for="other">Other</label><br>
+
+ 
+
+            <label>Birthday</label><br>
+
+            <label for="month">Month:</label>
+
+            <select id="month" name="month">
+
+                <option value="-1">- Select Month -</option>
+
+                <option value="01">January</option>
+
+                <option value="02">February</option>
+
+                <option value="03">March</option>
+
+                <option value="04">April</option>
+
+                <option value="05">May</option>
+
+                <option value="06">June</option>
+
+                <option value="07">July</option>
+
+                <option value="08">August</option>
+
+                <option value="09">September</option>
+
+                <option value="10">October</option>
+
+                <option value="11">November</option>
+
+                <option value="12">December</option>
+
+</select>
+
+ 
+
+                <!-- Add month options here -->
+
+            </select><br>
+
+ 
+
+            <label for="day">Day :</label>
+
+            <input type="number" id="day" name="day" min="1" max="31"><br>
+
+ 
+
+            <label for="year">Year :</label>
+
+            <input type="number" id="year" name="year" min="1900" max="2099">
+
+        </fieldset>
+
+ 
+
+        <fieldset>
+
+            <legend>I live in</legend>
+
+            <label for="postal_code">Postal Code</label>
+
+            <input type="text" id="postal_code" name="postal_code">
+
+        </fieldset>
+
+ 
+
+        <h2>Select an ID and password</h2>
+
+        <fieldset>
+
+            <legend>NDParking ID</legend>
+
+            <input type="text" id="ndparking_id" name="ndparking_id" pattern="[a-z0-9_.]{6,32}" required>
+
+            <label for="ndparking_id">@ndparking.com</label><br>
+
+ 
+
+            <label for="password">Password</label>
+
+            <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{6,32}" required>
+
+            <p>Capitalization matters. Use 6 to 32 characters, no spaces.</p>
+
+ 
+
+            <label for="retype_password">Re-type Password</label>
+
+            <input type="password" id="retype_password" name="retype_password" required>
+
+        </fieldset>
+
+ 
+
+        <h2>In case you forget your ID or password</h2>
+
+        <fieldset>
+
+            <label for="alternate_email">Alternate Email :</label>
+
+            <input type="email" id="alternate_email" name="alternate_email"><br>
+
+ 
+
+            <label for="security_question">Security Question :</label>
+
+            <select id="security_question" name="security_question">
+
+                <option value="-1">- Select One -</option>
+
+                <!-- Add security question options here -->
+
+            </select><br>
+
+ 
+
+            <label for="security_answer">Your Answer :</label>
+
+            <input type="text" id="security_answer" name="security_answer">
+
+        </fieldset>
+
+ 
+
+        <input type="submit" value="Submit">
+
+        <input type="reset" value="Reset">
+
+        <button type="button" onclick="window.close();">Close</button>
+
+    </form>
+
+</body>
+
+</html>
